@@ -2,9 +2,10 @@ package com.bridgelabz.empwage;
 
 public class EmployeeWage {
 
-    public static void main(String[] args)
-    {
 
+
+        public static void calculateTotalWage()
+        {
             final int PART_TIME = 1;
             final int FULL_TIME = 2;
             final int WAGE_PER_HR = 20;
@@ -12,7 +13,7 @@ public class EmployeeWage {
             final int MAX_WORKING_HRS = 100;
 
             int totalWage = 0;
-            int workingHrs;
+            int workingHrs ;
             System.out.printf("%5s     %5s     %5s     %5s\n", "Day", "Workinghrs", "Wage", "Total working hrs");
             for (int day = 1, totalWorkingHrs = 0; day <= MAX_WORKING_DAYS
                     && totalWorkingHrs < MAX_WORKING_HRS; day++, totalWorkingHrs += workingHrs)
@@ -38,6 +39,10 @@ public class EmployeeWage {
             }
             System.out.println("Total wage for a month is " + totalWage);
         }
-    }
 
+        public static void main(String[] arg)
+        {
+            calculateTotalWage();
+        }
+    }
 
