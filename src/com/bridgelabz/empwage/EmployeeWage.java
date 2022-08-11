@@ -21,7 +21,7 @@ public class EmployeeWage {
                     workingHours = 8;
                     break;
                 case PART_TIME:
-                    System.out.println("Employee is prest Part-time");
+                    System.out.println("Employee is present Part-time");
                     workingHours = 4;
                     break;
                 default:
