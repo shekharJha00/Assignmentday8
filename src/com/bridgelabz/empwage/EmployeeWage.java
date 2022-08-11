@@ -17,7 +17,7 @@ public class EmployeeWage {
             switch (empType)
             {
                 case FULL_TIME:
-                    System.out.println("Emplyoee is present full time");
+                    System.out.println("Emplyoee is present full-time");
                     workingHours = 8;
                     break;
                 case PART_TIME:
