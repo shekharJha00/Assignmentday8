@@ -1,5 +1,7 @@
 package com.bridgelabz.empwage;
 
+import java.util.ArrayList;
+
 interface IEmployeeWageComputation
 {
 public void addCompany(String companyName, int wagePerHr, int maxWorkingDays, int maxWorkingHrs);
@@ -14,19 +16,21 @@ public void addCompany(String companyName, int wagePerHr, int maxWorkingDays, in
         public static final int PART_TIME = 1;
         public static final int FULL_TIME = 2;
 
-        int noOfCompanies, index;
-        CompanyEmpWage[] companies;
 
-        public EmployeeWageComputation(int noOfCompanies)
+        ArrayList<CompanyEmpWage> companies;
+
+        public EmployeeWageComputation(int i)
         {
-            this.noOfCompanies = noOfCompanies;
-            companies = new CompanyEmpWage[noOfCompanies];
-            index = 0;
+            companies = new ArrayList<>();
         }
+
+
+
 
         public void addCompany(String companyName, int wagePerHr, int maxWorkingDays, int maxWorkingHrs)
         {
-            companies[index++] = new CompanyEmpWage(companyName, wagePerHr, maxWorkingDays, maxWorkingHrs);
+            CompanyEmpWage company = new CompanyEmpWage(companyName, wagePerHr, maxWorkingDays, maxWorkingHrs);
+            companies.add(company);
         }
 
         int generateEmployeeType()
