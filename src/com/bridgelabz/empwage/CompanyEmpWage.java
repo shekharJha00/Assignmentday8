@@ -9,7 +9,9 @@ class CompanyEmpWage
     final int WAGE_PER_HR;
     final int MAX_WORKING_DAYS;
     final int MAX_WORKING_HRS;
+
     int totalEmpWage;
+
 
     CompanyEmpWage(String companyName, int wagePerHr, int maxWorkingDays, int maxWorkingHrs)
     {
@@ -26,8 +28,7 @@ class CompanyEmpWage
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         System.out.println("Details of " + COMPANY_NAME + " employee");
         System.out.println("-----------------------------------------------------");
         System.err.println("Wage per hour:" + WAGE_PER_HR);
